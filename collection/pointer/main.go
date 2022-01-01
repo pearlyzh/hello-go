@@ -67,4 +67,25 @@ func main() {
 
 	myActorWithNew := new(Actor)
 	fmt.Println("myActorWithNew: ", myActorWithNew)
+
+	// nil pointer
+	var myStructNil *MyStruct
+
+	fmt.Println("myStructNil", myStructNil)
+	myStructNil = new(MyStruct)
+	myStructNil.foo = 100
+	// would be the same
+	// (*myStructNil).foo = 100
+	fmt.Println("myStructNil.actor.name: ", (*myStructNil).foo)
+
+	// compare a pointer to an int in an array to the pointer to the address of that array
+	myAnotherArray := [3]int{1, 2, 3}
+	myIntPointer := &myAnotherArray[0]
+	myAnotherArrayPointer := &myAnotherArray
+
+	fmt.Printf("myIntPointer: %v - %T - %p\n", myIntPointer, myIntPointer, myIntPointer)
+	fmt.Printf("myAnotherArrayPointer: %v - %T - %p\n", myAnotherArrayPointer, myAnotherArrayPointer, myAnotherArrayPointer)
+	fmt.Printf("%v\n", *myIntPointer == (*myAnotherArrayPointer)[0])
+	// would be the same
+	fmt.Printf("%v\n", *myIntPointer == myAnotherArrayPointer[0])
 }
