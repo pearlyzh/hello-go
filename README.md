@@ -1,4 +1,5 @@
 # Go
+Messing around with Go concepts.
 
 ## Characteristics
 - Naturally non-blocking
