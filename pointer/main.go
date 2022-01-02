@@ -15,7 +15,7 @@ type Actor struct {
 	films []string
 }
 
-// &: ampersand stands for is get the pointer
+// & (address of): ampersand stands for is get the pointer
 // *: the asterisk stands for dereference
 func main() {
 	a := 10
@@ -88,4 +88,17 @@ func main() {
 	fmt.Printf("%v\n", *myIntPointer == (*myAnotherArrayPointer)[0])
 	// would be the same
 	fmt.Printf("%v\n", *myIntPointer == myAnotherArrayPointer[0])
+
+	// Notes for array vs slices
+	/*
+			All assignments in Go are copy operations
+			Slice is actually a projection of an underlying array, so the slice doesn't contain the data itself, the slice
+			contains a pointer to the first element of the underlying array. So when we work with slices, the internal
+			representation of a slice actually has an pointer to an array. So the data get copied is the pointer,
+			not the data itself.
+			The same with map. Slice and Map contain internal pointers, so copies point to the same underlying data
+
+			If we are working with other data types, specifically PRIMITIVES, ARRAYS or STRUCTS. It's going to copy the entire
+		 	structure unless you are using pointers.
+	*/
 }
