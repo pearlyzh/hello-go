@@ -1,4 +1,4 @@
-package main
+package curl
 
 import "fmt"
 
@@ -11,6 +11,14 @@ and how we can trigger that on our own.
 
 func main() {
 	fmt.Println("start")
-	fmt.Println("middle")
+	// LIFO order of defer so that we can close the resources in the opposite way when we open them
+	defer fmt.Println("defer2")
+	// same like finally in java, move this line AFTER the main function, and BEFORE
+	// the main function return
+	defer fmt.Println("defer1")
 	fmt.Println("end")
+
+	func() {
+
+	}()
 }

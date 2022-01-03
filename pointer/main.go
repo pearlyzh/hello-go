@@ -101,4 +101,10 @@ func main() {
 			If we are working with other data types, specifically PRIMITIVES, ARRAYS or STRUCTS. It's going to copy the entire
 		 	structure unless you are using pointers.
 	*/
+
+	/*
+			new(T) is equivalent to &T{} .
+			make(T) : it returns an initialized value of type T ,
+		It allocates and initializes the memory. Its used for slices, map and channels. You need make() to create channels and maps (and slices, but those can be created from arrays too).
+	*/
 }

@@ -64,4 +64,11 @@ func main() {
 	fmt.Printf("%v, %T\n", myRune, myRune)
 	fmt.Printf("%v, %T\n", string(myRune), string(myRune))
 	fmt.Printf("%v, %T\n", strconv.QuoteRune(myRune), strconv.QuoteRune(myRune))
+
+	myFunc := myFunc
+	fmt.Printf("%T\n", myFunc)
+}
+
+func myFunc() {
+
 }
