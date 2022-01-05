@@ -17,6 +17,8 @@ type Actor struct {
 
 // & (address of): ampersand stands for is get the pointer
 // *: the asterisk stands for dereference
+// https://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/
+
 func main() {
 	a := 10
 	// this asterisk before TYPE (int) is declaring the pointer to data of that type,
