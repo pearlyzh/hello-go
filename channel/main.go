@@ -33,7 +33,7 @@ func produce(channel chan Person) {
 	time.Sleep(3 * time.Second)
 	data := new(Person)
 	data.age = 10
-	data.name = "nghiatn"
+	data.name = "pearly"
 	fmt.Println("I am going to send this data: ", *data)
 	channel <- *data
 	data.name = "something else"
