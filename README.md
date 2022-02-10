@@ -49,3 +49,8 @@ func main() {
  - https://medium.com/rungo/the-anatomy-of-slices-in-go-6450e3bb2b94#:~:text=%E2%98%9B%20slice%20is%20a%20struct&text=len%20and%20cap%20is%20the,referenced)%20array%20is%20composed%20of.&text=But%20when%20a%20slice%20references,pointer%20will%20not%20be%20nil%20.
  - https://www.youtube.com/watch?v=a4HcEsJ1hIE
  - https://stackoverflow.com/a/27084475/6085492
+
+## Random Q&A
+ - When is the init() function run?
+   - https://stackoverflow.com/a/49831018/6085492
+   - import --> const --> var --> init()
